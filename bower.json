@@ -1,0 +1,21 @@
+{
+  "name": "lStore",
+  "main": "lStore.js",
+  "version": "0.0.0",
+  "authors": [
+    "Johannes Kärnstam <snack@johanneskarnstam.se>"
+  ],
+  "description": "Simple js wrapper for localStorage",
+  "keywords": [
+    "localStorage"
+  ],
+  "license": "MIT",
+  "homepage": "http://johanneskarnstam.se",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

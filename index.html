@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>lStore</title>
+</head>
+
+<body>
+    <script src="lStore.js"></script>
+
+<script>
+	 // Initialize with: var LS = new lStore('myKey');
+
+
+	 var LS = new lStore('myLSKey'),
+			 objects = [{
+				  'id': 1,
+				  'name': 'First',
+				  'isValid': true,
+				  'somOtherKey': 'somOtherValue'
+			 },
+				  {
+					   'id': 2,
+					   'name': 'Second',
+					   'isValid': false,
+					   'somOtherKey': 'somOtherValue'
+				  },
+				  {
+					   'id': 3,
+					   'name': 'Third',
+					   'isValid': false,
+					   'somOtherKey': 'somOtherValue'
+				  }];
+
+	 // For demo purposes
+	 LS.empty();
+
+	 for (var i = 0; i < objects.length; i++) {
+		  LS.add(objects[i]);
+	 };
+
+	 LS.removeEntry(2);
+
+
+	 console.table(LS.getAll('myLSKey'));
+
+	 console.log('Does item 2 exist: ' + LS.itemExists(2));
+	 console.log('Does item 3 exist: ' + LS.itemExists(3));
+
+	 console.log('Let\'s empty \'myKey\'');
+	 LS.empty();
+	 console.log(LS.getAll());
+</script>
+</body>
+
+</html>
